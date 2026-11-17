@@ -24,7 +24,7 @@
                     <label for="username">نام کاربری</label>
                     <input type="text" name="username" id="username"
                            required maxlength="15" pattern="\d{5,15}"
-                           inputmode="numeric" placeholder="کد پرسنلی"
+                           inputmode="numeric" placeholder="کد کاربری"
                            autocomplete="username">
                 </div>
 
