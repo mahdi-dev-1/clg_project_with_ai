@@ -1,0 +1,187 @@
+/* ===== پالت رنگ =====
+   navy     #1B365D
+   blue     #005A9C
+   gradient #60C1E5
+   sea      #A0E0EF
+*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    color: #0e2749;
+    font-family: "Vazirmatn", "Vazir", Tahoma, sans-serif;
+    background: linear-gradient(135deg, #A0E0EF 0%, #60C1E5 50%, #005A9C 100%);
+    background-attachment: fixed;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* ===== باکس لاگین ===== */
+.login-box-container {
+    width: 100%;
+    max-width: 420px;
+    padding: 30px 25px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 24px;
+    background-color: rgba(0, 90, 156, 0.92);
+    box-shadow: 0 15px 40px rgba(27, 54, 93, 0.45);
+    backdrop-filter: blur(6px);
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== هدر ===== */
+.form-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.iau-logo-container {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.iau-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.form-header-p {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+/* ===== فرم ===== */
+.login-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #e6f4fb;
+    margin-bottom: 6px;
+    padding-right: 4px;
+}
+
+.input-group input {
+    width: 100%;
+    height: 44px;
+    padding: 0 12px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 16px;
+    color: #0e2749;
+    background-color: #f1f6fa;
+    transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.input-group input::placeholder {
+    color: #6b7c92;
+    font-size: 14px;
+}
+
+.input-group input:hover {
+    background-color: #ffffff;
+}
+
+.input-group input:focus {
+    outline: none;
+    background-color: #ffffff;
+    border-color: #60C1E5;
+    box-shadow: 0 0 0 3px rgba(96, 193, 229, 0.35);
+}
+
+/* ===== دکمه ارسال ===== */
+.submit-input-c {
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+}
+
+.submit-input-c button {
+    width: 100%;
+    height: 46px;
+    border: none;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: 700;
+    color: #ffffff;
+    cursor: pointer;
+    background: linear-gradient(135deg, #60C1E5 0%, #005A9C 100%);
+    box-shadow: 0 6px 16px rgba(0, 90, 156, 0.45);
+    transition: transform 0.15s, box-shadow 0.2s, filter 0.2s;
+}
+
+.submit-input-c button:hover {
+    filter: brightness(1.08);
+    box-shadow: 0 8px 22px rgba(0, 90, 156, 0.55);
+}
+
+.submit-input-c button:active {
+    transform: translateY(1px) scale(0.99);
+}
+
+.submit-input-c button:focus-visible {
+    outline: 3px solid #A0E0EF;
+    outline-offset: 2px;
+}
+
+/* ===== واکنش‌گرایی ===== */
+@media (max-width: 480px) {
+    .login-box-container {
+        padding: 22px 18px 30px;
+        border-radius: 20px;
+    }
+    .iau-logo-container {
+        width: 80px;
+        height: 80px;
+    }
+    .form-header-p {
+        font-size: 18px;
+    }
+}
